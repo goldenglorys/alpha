@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+<meta class="viewport" content="width=device-width , initial-scale=1">
+<link rel="stylesheet" type="text/css" href="bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" href="bootstrap3/css/bootstrap.css">
+<script type="text/javascript" src="bootstrap3/js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootsrap.js"></script>
+</head>
+<body class="bg-success">
+<div class="container-fluid">
+	<h3>INVOICE RECEIPT</h3>
+	<span><button class="glyphicon glyphicon-plus bg-success" id="go"></button><button class="glyphicon glyphicon-minus bg-danger" id="min"></button></span>
+	<table class="table table-bordered table-stripped">
+			<tr>
+				<td>S/N</td>
+				<td>Description</td>
+				<td>Quantity</td>
+				<td>Amount</td>
+				<td>Total</td>
+			</tr>
+		</table>
+	<div id="myDiv1" class="col-md-5"></div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#go').click(function(){
+			var no = 1;
+			if(no==1){
+			no++};
+			$('#myDiv1').append('<tr><td>'+no+'</td><td><input type="text" name="" style="margin-left:150px;margin-bottom:50px"></td><td><input type="text" name="" style="margin-left:200px"></td><td><input type="text" name="" style="margin-left:130px"></td><td><input type="text" name="" style="margin-left:120px"></td></tr>') 
+		})
+		$('#min').click(function(){
+			$("tr").next('tr:last-child').remove()
+		})
+	});
+</script>
+</body>
+</html>

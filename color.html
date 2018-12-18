@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table>
+	<tr>
+		<td><input type="text" name="" id="text" oninput="display()"></td>
+		<td><input type="text" name="" id="show"></td>
+	</tr>
+	<tr><td><input type="color" name="" id="color" onchange="colorChange()"></td></tr>
+	<tr><td><input type="number" name="" id="numb" onchange="numbe()"></td></tr>
+</table>
+<script>
+	function display(){
+		document.getElementById('show').value=document.getElementById('text').value;
+	}
+	function colorChange(){
+		document.getElementById('show').style.color=color.value;
+	}
+	function numbe(){
+		document.getElementById('show').style.fontSize=numba.value+"px";
+	}
+</script>
+</body>
+</html>

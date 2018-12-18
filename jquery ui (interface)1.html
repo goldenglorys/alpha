@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="bootstrap3/js/jquery-3.1.1.js"></script>
+<script src="jquery-ui.js"></script>
+<link rel="stylesheet" href="jquery-ui.css">
+</head>
+<body>
+<p class="draggable">Drag me</p>
+<div class="droppable"><p>Drop here</p></div>
+<textarea></textarea>
+<input type="te" xtame="" id="datepicker">
+<script type="text/javascript">
+	$(function(){
+		$('.draggable').draggable({revert:true})
+		$('.droppable').droppable({
+			drop:function(event,ui){
+				$(this).find('p').addClass('ui-state-hightlight').html('Dropped!')}
+		})
+		$('#datepicker').datepicker()
+		
+	})
+</script>
+</body>
+</html>

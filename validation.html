@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" href="bootstrap3/css/bootstrap.css">
+<script type="text/javascript" src="bootstrap3/js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootsrap.js"></script>
+</head>
+<body class="bg-success">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-5">
+				<table  class="table table-bordred table-stripped bg-success table-condensed">
+					<thead>jQUERY REGISTRATION FORM</thead>
+					<tr class="form-group"><td><label>Firstname</label></td></tr>
+					<tr class="form-group"><td><input type="text" name="" class="form-control"></td></tr>
+					<tr class="form-group"><td><label>Lastname</label></td></tr>
+					<tr class="form-group"><td><input type="text" name="" class="form-control"></td></tr>
+					<tr class="form-group"><td><label>Password</label></td></tr>
+					<tr class="form-group"><td><input type="password" class="form-control" name="" id="pas1"></td></tr>
+					<tr class="form-group"><td><label>Re-enter Password</label></td></tr>
+					<tr class="form-group"><td><input type="password" class="form-control" name="" id="pas2"></td></tr>
+					<tr><td id="resp"></td></tr>
+					<tr class="form-group"><td><input type="submit" name="" class="form-control btn btn-success" id="submit"></td></tr>
+				</table>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+    		$(document).ready(function(){
+	   		$("#pas1").keyup(function(){
+	   			if($(this).val().length<6){
+	   				$("#resp").html("Please type at least 6 characters");
+	   				$(this).css("border","2px solid red")
+	   			}
+	   			if ($(this).val().length>6) {$(this).css("border","2px solid yellow");
+	   			$("#resp").html("Normal Password");
+	   		   } 
+	   		    if ($(this).val().length>10) {$(this).css("border","2px solid green");
+	   		    $("#resp").html("Strong Password");
+	   		  } 
+	   		});
+ // password 2
+	   		$("#pas2").keyup(function(){
+	   			if($(this).val().length<6){
+	   				$("#resp").html("Please type at least 6 characters");
+	   				$(this).css("border","2px solid red")
+	   			}
+	   			if ($(this).val().length>6) {$(this).css("border","2px solid yellow");
+	   			$("#resp").html("Normal Password");
+	   		   } 
+	   		    if ($(this).val().length>10) {$(this).css("border","2px solid green");
+	   		    $("#resp").html("Strong Password");
+	   		  } 
+	   		});
+            $("#submit").click(function(){
+    		 if($("#pas1").val() == ($("#pas2").val())){
+    		 	alert("Valid password");
+    		 }
+    		 else if($("#pas1").val() != ($("#pas2").val())){
+    		 	alert("Invalid password");
+    		 	
+    		 }
+    		})
+	   	});
+    </script>
+</body>
+</html>

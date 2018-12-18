@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width.initial-scale=1">
+<link rel="stylesheet" href="bootstrap3/css/bootstrap.css">
+<script type="text/javascript" src="bootstrap3/js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootsrap.js"></script>
+<style type="text/css">
+	#myDiv{
+		background-color: indigo;
+		width: 200px;
+		height: 200px;
+		display: none;
+		border-radius: 8px;
+	}
+</style>
+</head>
+<body>
+<button id="sta">Start</button>
+<button id="stop">Stop</button>
+<div id="myDiv"></div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#sta').mouseover(function(){
+			$('#myDiv').slideDown(5000)
+		})
+		$('#stop').click(function(){
+			$('#myDiv').stop();
+		})
+	})
+</script>
+</body>
+</html>

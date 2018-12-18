@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width.initial-scale=1">
+<link rel="stylesheet" href="bootstrap3/css/bootstrap.css">
+<script type="text/javascript" src="bootstrap3/js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="bootstrap3/js/bootsrap.js"></script>
+</head>
+<body>
+<div class="container">
+	<table class="table table-bordered">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>a</td>
+			<td>b</td>
+			<td id="tds">c</td>
+			<td>d</td>
+			<td>e</td>
+		</tr>
+		<tr>
+			<td>A</td>
+			<td>B</td>
+			<td>C</td>
+			<td>D</td>
+			<td>E</td>
+		</tr>
+		<tr>
+			<td>I</td>
+			<td>II</td>
+			<td>III</td>
+			<td>IV</td>
+			<td>V</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#tds').nextAll().css({color:'red'})
+	})
+</script>
+</body>
+</html>
